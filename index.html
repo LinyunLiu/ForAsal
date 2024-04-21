@@ -8,13 +8,13 @@
         function displayCountdown() {
             const now = new Date();
             const deadline = new Date();
-            deadline.setHours(12);
+            deadline.setHours(23);
             deadline.setMinutes(0);
             deadline.setSeconds(0);
 
             const timeDiff = deadline.getTime() - now.getTime();
             if (timeDiff <= 0) {
-                window.location.assign('letter-e89527.html')
+                window.location.assign('letters/20042024/letter.html')
             }
             // Convert time difference to hours, minutes, and seconds
             let hours = Math.floor(timeDiff / (1000 * 60 * 60));

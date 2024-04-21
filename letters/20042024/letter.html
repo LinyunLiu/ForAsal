@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Letter</title>
+    <style>
+      @font-face {
+        font-family: 'Lovya';
+        src: url('../../fonts/Lovya.otf')
+      }
+      body{
+        background: #222222;
+        font-size: 18px;
+      }
+      main{
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+      }
+      p{
+        font-family: Avenir, serif;
+        color: floralwhite;
+        margin: 12px;
+      }
+      pre{
+        font-family: Avenir, serif;
+        color: floralwhite;
+        margin: 12px;
+        font-weight: bold;
+      }
+      p.header{
+        font-size: 40px;
+        font-family: Lovya,serif;
+      }
+      p.end{
+        margin-bottom: 5px;
+        font-family: Lovya,serif;
+        font-size: 50px;
+        color: lightpink;
+      }
+      p.name{
+        margin-top: 50px;
+        margin-bottom: -6px;
+        font-size: 12px;
+        color: dimgrey;
+        align-self: flex-end;
+        font-style: italic;
+      }
+      p.date{
+        font-size: 12px;
+        color: dimgrey;
+        align-self: flex-end;
+        font-style: italic;
+      }
+      #play-button{
+        background: lightpink;
+        border: 1px solid lightpink;
+        border-radius: 18px;
+        width: 100px;
+        height: 30px;
+        font-family: Avenir, serif;
+        font-weight: bold;
+        margin: 20px 0 20px 10px;
+      }
+      #play-button:hover{
+        color: floralwhite;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      const audio = new Audio('die4you.mp3');
+      audio.load();
+      audio.loop = true;
+      audio.volume = 0.5
+      function play(){
+        if (audio.paused){
+          audio.play();
+          let button = document.getElementById('play-button')
+          button.innerHTML = "Pause"
+        }
+        else{
+          audio.pause()
+          let button = document.getElementById('play-button')
+          button.innerHTML = "Play"
+        }
+      }
+
+    </script>
+</head>
+<body>
+  <main>
+    <p class="header">Howdy ~</p>
+    <button onclick="play()" id="play-button">Play</button>
+    <pre>
+Limit every second left
+'Til I'm off balance
+Ooh, love
+I'm there in spirit, ooh
+Each and every breath I spend
+You are collecting
+See it through
+I would die for you
+Each and every breath I spend
+You are collecting, mm
+Limit every second left
+'Til I'm off balance, mm
+Each and every breath I spend
+Oh, my love
+Oh, my love
+Take your time
+Oh, my love
+Take your time
+Oh, my love
+Oh, my love
+
+      ♪
+
+Oh, my love
+Oh, my love
+Take your time
+Oh, my love
+Take your time
+See it through, mm
+    </pre>
+    <p class="end">Love</p>
+    <p class="name">LINYUN</p>
+    <p class="date">APRIL 20TH, 2024</p>
+  </main>
+</body>
+</html>
