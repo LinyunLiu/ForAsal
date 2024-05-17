@@ -34,7 +34,10 @@
             let time = document.getElementById('time')
             time.textContent = countdownString;
         }
-        setInterval(displayCountdown, 1000);
+        // setInterval(displayCountdown, 1000);
+        function onButtonClick(){
+            window.location.assign('letters/17052024/letter.html')
+        }
     </script>
     <style>
         @font-face {
@@ -62,11 +65,24 @@
         p.time{
             font-size: 40px;
         }
+        button{
+            width: 100px;
+            height: 30px;
+            font-family: Futura, "futura-pt", sans-serif;
+            font-weight: bold;
+            background: lightpink;
+            border: 1px solid lightpink;
+            border-radius: 20px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <main>
-        <p class="time" id="time">00:00:00</p>
+<!--        <p class="time" id="time">00:00:00</p>-->
+        <button onclick="onButtonClick()">Enter</button>
     </main>
 </body>
 </html>
